@@ -48,6 +48,12 @@ $ pip install pinetoken
 $ pinetoken -h
 ```
 
+atau 
+
+```
+$ pip install pinetoken==0.0.1
+```
+
 ### Mengunakan github repository
 
 ```bash
@@ -58,7 +64,7 @@ $ python main.py <-cmd> <--arghs>
 ```
 
 ## install dengan `.Zip`
-**pergi** **ke** [#2]()
+**download** **di** [release-0.0.1](./release/pinetoken-v0.0.1.zip)
 - Download zip
 - siapkah folder kosong di `C:\` contoh `C:\my-cli`
 - Tambahkan ke PATH agar bisa dijalankan dari terminal mana pun:

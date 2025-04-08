@@ -1,6 +1,34 @@
-# pinetoken
+<h1 align="center">pinetoken </h1>
 
-**pinetoken** adalah aplikasi Command Line Interface (CLI) untuk mengelola token rahasia (seperti GitHub Token, API Key, dsb) secara aman dan terenkripsi di komputer lokal.
+<div align="center" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+
+  <!-- Gambar 1 -->
+  <a href="https://github.com/openpineapletools/pinetoken" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+    <img src="./src/img/pinetoken.png" 
+         alt="pinetoken logo" 
+         style="max-width: 160px; width: 100%; height: auto;" />
+  </a>
+</div>
+
+
+<p align="center">
+  <i>CLI untuk mengelola token rahasia (GitHub Token, API Key, dll) secara aman dan terenkripsi di komputer lokal.</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"/>
+  <img src="https://img.shields.io/badge/python-3.9%2B-blue.svg" alt="Python"/>
+  <img src="https://img.shields.io/github/license/openpineapletools/pinetoken.svg" alt="License"/>
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey" alt="Platform"/>
+  <img src="https://img.shields.io/badge/encryption-AES256-green" alt="Encryption"/>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"/>
+  <img src="https://img.shields.io/github/issues/openpineapletools/pinetoken.svg" alt="Issues"/>
+  <img src="https://img.shields.io/github/last-commit/openpineapletools/pinetoken.svg" alt="Last Commit"/>
+  <img src="https://img.shields.io/maintenance/yes/2025.svg" alt="Maintained"/>
+  <img src="https://img.shields.io/github/stars/openpineapletools/pinetoken.svg?style=social" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/openpineapletools/pinetoken.svg?style=social" alt="Forks"/>
+</p>
+
 
 ## Fitur
 
@@ -15,116 +43,172 @@
 
 ## Instalasi
 
-### 1. Clone Repository
+### Mengunakan pypi
+kalau kalian mau instal pakai `pyip` kalian bisa jalankan perintah ini 
 
 ```bash
-$ git clone https://github.com/username/pinetoken.git
-$ cd pinetoken
+$ pip install pinetoken
+$ pinetoken -h
 ```
 
-### 2. Buat Virtual Environment (Opsional tapi Direkomendasikan)
+### Mengunakan github repository
 
 ```bash
-$ python -m venv venv
-$ source venv/bin/activate      # Untuk Linux/macOS
-$ .\venv\Scripts\activate       # Untuk Windows
-```
-
-### 3. Install Dependency
-
-```bash
+$ git clone https://github.com/openpineapletools/pinetoken.git
 $ pip install -r requirements.txt
+$ cd main
+$ python main.py <-cmd> <--arghs>
 ```
 
-Jika tidak ada file `requirements.txt`, Anda bisa langsung install:
+## install dengan `.Zip`
+**pergi** **ke** [#2]()
+- Download zip
+- siapkah folder kosong di `C:\` contoh `C:\my-cli`
+- Tambahkan ke PATH agar bisa dijalankan dari terminal mana pun:
+
+- Tambah ke PATH Manual (Windows)
+- Buka `System Environment Variables`
+- Klik `Environment Variables`
+- Di bagian `System variables`, pilih `Path`, klik `Edit`
+- Tambahkan folder tempat `pinetoken.exe` diextract, misal: `C:\my-cli`
+
+>[!NOTE]
+>tidak di sarankan karna kamitelah mempermudha instalais negna `pip` dan juga `exe` dan `installler`
+
+## Install Dan Auto setup
+
+kami mengaunakan `inno` untuk auto setup dan mempermudah pengunaan nya. download [disini]()
+
+---
+
+## 📘 Cara Penggunaan
+
+### 🔹 Perintah Utama
 
 ```bash
-$ pip install cryptography tabulate
+$ pinetoken <-cmd> <-flags> <args>
+```
+
+Contoh paling dasar:
+```bash
+$ pinetoken -h      # Menampilkan bantuan
+$ pinetoken --init  # Inisialisasi dan buat password utama
 ```
 
 ---
 
-## Cara Menggunakan
-
-### 1. Inisialisasi Penyimpanan
-
+### Help
 ```bash
-$ python main.py --init
+$ pinetoken -h     
+$ pinetoken --help
 ```
 
-Ini akan membuat file `pinetokeninit.opine` dan meminta Anda membuat password master.
-
-### 2. Menambahkan Token
-
-```bash
-$ python main.py --add \
-  -s github \
-  -n "GitHub Token" \
-  -d "Token untuk akses API GitHub" \
-  -t ghp_xxx123 \
-  -e 2025-12-31 \
-  -l "https://github.com"
+**Output `--help`:**
 ```
+usage: pinetoken [-h] [--init] [--add] [--list] [--show TOKEN_NAME] [--del TOKEN_NAME] [--export]
+                 [-s SERVICE] [-n NAME] [-d DESC] [-t TOKEN] [-e EXPIRE] [-l LL]
 
-### 3. Menampilkan Semua Token
+🔐 CLI Token Manager – Simpan dan kelola token API kamu dengan aman.
 
-```bash
-$ python main.py --list
-```
-
-### 4. Melihat Detail Token
-
-```bash
-$ python main.py --show "GitHub Token"
-```
-
-### 5. Menghapus Token
-
-```bash
-$ python main.py --del "GitHub Token"
-```
-
-### 6. Mengekspor Token ke File JSON
-
-```bash
-$ python main.py --export
+Options:
+  -h, --help            Tampilkan bantuan dan keluar
+  --init                Inisialisasi storage dan buat password utama
+  --add                 Tambahkan token baru ke penyimpanan
+  --list                Tampilkan semua token yang tersimpan
+  --show TOKEN_NAME     Tampilkan detail token berdasarkan nama
+  --del TOKEN_NAME      Hapus token berdasarkan nama
+  --export              Ekspor semua token ke file eksternal
+  -s, --service SERVICE Nama service (opsional)
+  -n, --name NAME       Nama token
+  -d, --desc DESC       Deskripsi token
+  -t, --token TOKEN     Token yang ingin disimpan
+  -e, --expire EXPIRE   Tanggal kedaluwarsa (format: YYYY-MM-DD)
+  -l, --ll LL           Lokasi atau asal token
 ```
 
 ---
 
-## Struktur Proyek
+### Menambahkan Token
 
+Kamu bisa menambahkan token dengan satu perintah gabungan:
+
+```bash
+$ pinetoken --add -s "GitHub" -n "github-main" -d "Token akses utama" -t "ghp_xxx" -e "2025-12-31" -l "PC kantor"
 ```
-pinetoken/
-├── main.py
-├── requirements.txt
-├── README.md
-├── pinetokeninit.opine
-└── function/
-    ├── __init__.py
-    ├── utils.py
-    ├── add.py
-    ├── delete.py
-    ├── export.py
-    ├── init.py
-    ├── list.py
-    ├── show.py
+
+Atau satu per satu (tidak disarankan karena hanya flag terakhir yang diproses):
+
+```bash
+$ pinetoken --add -s "GitHub"
+$ pinetoken --add -n "github-main"
+# dan seterusnya...
+```
+>[!NOTE]
+>Disarankan gunakan semua flag dalam satu perintah untuk menghindari konflik antar state.
+
+---
+
+### Lihat Daftar Token
+```bash
+$ pinetoken --list
 ```
 
 ---
 
-## Catatan Keamanan
-
-- Token disimpan dalam file lokal `pinetokeninit.opine` dalam bentuk terenkripsi menggunakan password master.
-- Simpan backup password Anda dengan aman, karena jika lupa, data tidak bisa didekripsi kembali.
-- File `.opine` tidak boleh dibagikan atau dikirim melalui jaringan publik.
+### Tampilkan Detail Token
+```bash
+$ pinetoken --show "github-main"
+```
 
 ---
 
-## Lisensi
-
-MIT License - bebas digunakan, dimodifikasi, dan didistribusikan.
-
+### Hapus Token
+```bash
+$ pinetoken --del "github-main"
 ```
 
-Kalau kamu mau versi yang support markdown untuk GitHub (dengan badge, link navigasi, dsb), tinggal bilang aja, nanti aku bantu tambahkan.
+---
+
+### Ekspor Token
+```bash
+$ pinetoken --export
+```
+
+###  Catatan Keamanan
+
+-  **Token disimpan secara lokal** di file `pinetokeninit.opine`, dalam bentuk **terenkripsi** menggunakan _master password_.
+-  **Jangan lupa password Anda.** Jika lupa, data **tidak bisa dipulihkan** karena sistem ini tidak menyimpan salinan password.
+-  **Jangan bagikan** file `.opine` ke siapa pun atau melalui jaringan publik. Perlakukan seperti dompet digital rahasia.
+>[!NOTE]
+>Selalu backup password Anda di tempat aman (misalnya, password manager offline).
+
+---
+
+### 📄 Lisensi
+
+**MIT License**  
+Bebas digunakan, dimodifikasi, dan didistribusikan dengan tetap mencantumkan atribusi.
+
+[📜 Pelajari MIT License](https://opensource.org/licenses/MIT)
+
+---
+<div align="center">
+
+  <a href="https://github.com/openpineapletools/pinetoken" target="_blank">
+    <img src="https://img.shields.io/github/stars/openpineapletools/pinetoken?style=social" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/openpineapletools/pinetoken" target="_blank">
+    <img src="https://img.shields.io/github/forks/openpineapletools/pinetoken?style=social" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/openpineapletools/pinetoken/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/github/license/openpineapletools/pinetoken?color=blue" alt="License">
+  </a>
+  <a href="https://github.com/openpineapletools/pinetoken/releases" target="_blank">
+    <img src="https://img.shields.io/github/v/release/openpineapletools/pinetoken?label=release" alt="Latest Release">
+  </a>
+
+  <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+    Dibuat dengan ❤️ oleh <a href="https://github.com/openpineapletools" target="_blank">openpineaple </a> • Powered by Python
+  </p>
+
+</div>

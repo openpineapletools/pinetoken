@@ -24,6 +24,8 @@ build/
 *.exe
 output/
 *.spec
+installer/
+
 
 # ======================================
 # PyInstaller
@@ -46,3 +48,4 @@ desktop.ini
 # ======================================
 .initpinetoken.json
 main.py
+pinetoken/

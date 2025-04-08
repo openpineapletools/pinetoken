@@ -1,0 +1,47 @@
+# ======================================
+# Python
+# ======================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.eggs/
+*.env
+*.venv
+.env
+.venv/
+env/
+venv/
+dist/
+build/
+*.log
+
+# ======================================
+# Installer & Executable
+# ======================================
+*.exe
+output/
+*.spec
+
+# ======================================
+# PyInstaller
+# ======================================
+*.manifest
+*.spec
+*.dll
+*.ico
+
+# ======================================
+# VSCode & OS-specific
+# ======================================
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ======================================
+# Project-specific (misalnya database/token json lokal)
+# ======================================
+.initpinetoken.json

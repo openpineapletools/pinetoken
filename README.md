@@ -64,7 +64,7 @@ $ python main.py <-cmd> <--arghs>
 ```
 
 ## install dengan `.Zip`
-**download** **di** [release-0.0.1](./release/pinetoken-v0.0.1.zip)
+**download** **di** [release-0.0.1](./release/0.0.1/zip/pinetoken-v0.0.1.zip)
 - Download zip
 - siapkah folder kosong di `C:\` contoh `C:\my-cli`
 - Tambahkan ke PATH agar bisa dijalankan dari terminal mana pun:

@@ -80,7 +80,7 @@ $ python main.py <-cmd> <--arghs>
 
 ## Install Dan Auto setup
 
-kami mengaunakan `inno` untuk auto setup dan mempermudah pengunaan nya. download [disini]()
+kami mengaunakan `inno` untuk auto setup dan mempermudah pengunaan nya. download [disini](https://github.com/openpineapletools/pinetoken/releases/tag/v0.0.1/pinetoken-setup-0.0.1.exe)
 
 ---
 

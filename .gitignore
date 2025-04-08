@@ -45,3 +45,4 @@ desktop.ini
 # Project-specific (misalnya database/token json lokal)
 # ======================================
 .initpinetoken.json
+main.py

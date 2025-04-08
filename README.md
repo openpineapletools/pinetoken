@@ -1,15 +1,12 @@
 <h1 align="center">pinetoken </h1>
 
-<div align="center" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
-
-  <!-- Gambar 1 -->
-  <a href="https://github.com/openpineapletools/pinetoken" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
-    <img src="./src/img/pinetoken.png" 
-         alt="pinetoken logo" 
-         style="max-width: 160px; width: 100%; height: auto;" />
+<div align="center">
+  <a href="https://github.com/openpineapletools/pinetoken" target="_blank">
+    <img src="./src/img/pinetoken.png" alt="pinetoken logo" width="160" />
+    <p><strong>pinetoken</strong></p>
   </a>
-</div>
 
+</div>
 
 <p align="center">
   <i>CLI untuk mengelola token rahasia (GitHub Token, API Key, dll) secara aman dan terenkripsi di komputer lokal.</i>

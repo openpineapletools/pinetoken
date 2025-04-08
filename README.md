@@ -78,9 +78,38 @@ $ python main.py <-cmd> <--arghs>
 >[!NOTE]
 >tidak di sarankan karna kamitelah mempermudha instalais negna `pip` dan juga `exe` dan `installler`
 
-## Install Dan Auto setup
+### Install Dan Auto setup
 
 kami mengaunakan `inno` untuk auto setup dan mempermudah pengunaan nya. download [disini](https://github.com/openpineapletools/pinetoken/releases/tag/v0.0.1/pinetoken-setup-0.0.1.exe)
+
+### Cara Instalasi dengan WHL dan PipLocalHost
+Jika kamu baru pertama kali menginstal aplikasi Python, ikuti langkah-langkah berikut untuk memulai.
+
+#### **Langkah 1: Unduh File Instalasi**
+Kamu perlu mengunduh file instalasi yang sudah disediakan. Pilih salah satu format berikut:
+- **Unduh file `.whl`** [disini](./release/0.0.1/dist/pinetoken-0.0.1-py3-none-any.whl)
+- **Unduh file `.tar.gz`** [disini](./release/0.0.1/dist/pinetoken-0.0.1.tar.gz)
+
+**Apa itu file `.whl` dan `.tar.gz`?**
+- `.whl` adalah file paket Python yang sudah dibangun dan siap diinstal.
+- `.tar.gz` adalah file sumber yang bisa kamu kompilasi dan instal.
+
+#### **Langkah 2: Instalasi dengan Terminal**
+Setelah mengunduh file yang kamu pilih, lakukan langkah-langkah berikut:
+1. **Letakkan file di lokasi yang kamu inginkan** (misalnya, folder `Downloads`).
+2. **Buka Terminal atau Command Prompt** di direktori tempat file berada.
+3. Jalankan perintah berikut di terminal:
+
+   ```bash
+   $ python -m build
+   $ pip install .
+   ```
+
+   - Perintah pertama (`python -m build`) akan membangun paket Python.
+   - Perintah kedua (`pip install .`) akan menginstal paket yang sudah dibangun tadi.
+
+#### **Langkah 3: Pengujian**
+Setelah instalasi selesai, kamu bisa mulai menggunakan aplikasi. Coba jalankan dan pastikan semuanya berfungsi dengan baik!
 
 ---
 
